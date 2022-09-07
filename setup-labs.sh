@@ -1,3 +1,4 @@
 cd ~/environment
 git clone git@github.com:Elva-Classroom/terraform-iam.git
-echo -e "\nRun the following:\ncd ~/environment/terraform-iam"
+git clone git@github.com:Elva-Classroom/terraform-vpc.git
+git clone git@github.com:Elva-Classroom/terraform-eks.git
