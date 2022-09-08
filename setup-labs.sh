@@ -1,11 +1,13 @@
 #!/bin/bash
 cd ~/environment
-echo "c9_project=\"$C9_PROJECT\"" > terraform.tfvars       
+echo "variable \"c9_project\" {
+  value=\"$C9_PROJECT\"
+}" > c9_project.tf
 REPOS="terraform-iam terraform-vpc terraform-eks terraform-data-integration-student terraform-data-integration terraform-rds-mysql terraform-ghost ubuntu-on-kubernetes"
 for REPO in $REPOS; do
   git clone git@github.com:Elva-Classroom/$REPO.git
   if [ -d $REPO/terraform ]; then
-    cp terraform.tfvars $REPO/terraform/c9_project.auto.tfvars
+    cp c9_project.tf $REPO/terraform/c9_project.tf
   fi
 done
-rm terraform.tfvars
+rm c9_project.tf
