@@ -8,3 +8,4 @@ for REPO in $REPOS; do
     cp terraform.tfvars $REPO/terraform/c9_project.auto.tfvars
   fi
 done
+rm terraform.tfvars
