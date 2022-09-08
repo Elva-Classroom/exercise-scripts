@@ -4,4 +4,4 @@ aws --region us-west-2 secretsmanager get-secret-value --secret-id asu-github-ss
 chmod 0600 ~/.ssh/id_rsa
 ssh-keyscan github.com >> ~/.ssh/known_hosts
 echo
-ssh -T -o StrictHostKeyChecking=no git@github.com
+ssh -T git@github.com
