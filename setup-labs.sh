@@ -1,5 +1,9 @@
 #!/bin/bash
 cd ~/environment
+if [ -z "$C9_PROJECT" ]; then
+  echo "Something is wrong with your Cloud9, please let your instructor know."
+  exit 1
+fi
 echo "variable \"c9_project\" {
   default = \"$C9_PROJECT\"
 }" > c9_project.tf
