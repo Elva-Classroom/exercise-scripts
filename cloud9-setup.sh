@@ -38,5 +38,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm completion bash >> ~/.bash_completion
 
+pip3 install boto3 --upgrade
+
 echo
 ssh -T git@github.com
