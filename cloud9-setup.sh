@@ -22,6 +22,7 @@ unzip -qo awscliv2.zip
 sudo ./aws/install --update
 rm awscliv2.zip
 rm -r aws
+aws configure set region us-west-2
 
 echo 'export LBC_VERSION="v2.4.1"' >>  ~/.bash_profile
 echo 'export LBC_CHART_VERSION="1.4.1"' >>  ~/.bash_profile
