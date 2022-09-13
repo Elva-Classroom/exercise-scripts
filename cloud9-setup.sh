@@ -19,7 +19,7 @@ kubectl completion bash >>  ~/.bash_completion
 
 curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip -qo awscliv2.zip
-sudo ./aws/install
+sudo ./aws/install --update
 rm awscliv2.zip
 rm -r aws
 
