@@ -1,3 +1,5 @@
+sh ./increase-disk.sh
+
 sudo yum install jq gettext bash-completion moreutils -y
 
 git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
@@ -34,8 +36,6 @@ helm repo add stable https://charts.helm.sh/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo update
 helm completion bash >> ~/.bash_completion
-
-sh ./increase-disk.sh
 
 echo
 ssh -T git@github.com
