@@ -1,7 +1,7 @@
 #!/bin/bash
 aws configure set region us-west-2
 
-sh ./increase-disk.sh
+#sh ./increase-disk.sh
 
 sudo yum install jq gettext bash-completion moreutils -y
 
