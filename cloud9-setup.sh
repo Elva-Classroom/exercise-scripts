@@ -1,4 +1,12 @@
 #!/bin/bash
+project=$C9_PROJECT
+name_len=${#project}
+if [ $name_len -gt 12 ]; then
+  echo "Your Cloud9 instance name is longer than 12 characters."
+  echo "Please re-recreate your instance with a shorter name and no punctuation."
+  exit 1
+fi
+
 aws configure set region us-west-2
 
 #sh ./increase-disk.sh
