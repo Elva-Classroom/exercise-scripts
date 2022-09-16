@@ -3,7 +3,7 @@
 ec2-metadata | grep "placement: us-west-2"
 if [ $? -ne 0 ]; then
   echo "Your Cloud9 instance does not appear to be in the right region."
-  echo "Please re-create your instance int he us-west-2 (Oregon) region."
+  echo "Please re-create your instance in the us-west-2 (Oregon) region."
   exit 1
 fi
 
