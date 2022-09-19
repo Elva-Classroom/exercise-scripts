@@ -19,7 +19,7 @@ aws configure set region us-west-2
 
 #sh ./increase-disk.sh
 
-sudo yum install jq gettext bash-completion moreutils -y
+sudo yum install -y jq gettext bash-completion moreutils amazon-efs-utils
 
 git clone https://github.com/hashivim/vim-terraform.git ~/.vim/pack/plugins/start/vim-terraform
 aws --region us-west-2 secretsmanager get-secret-value --secret-id asu-github-ssh-key | jq -r .SecretString > ~/.ssh/id_rsa
