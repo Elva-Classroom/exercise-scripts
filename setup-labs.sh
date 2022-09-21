@@ -15,3 +15,7 @@ for REPO in $REPOS; do
   fi
 done
 rm c9_project.tf
+for REPO in $REPOS; do
+  cd ~/environment/$REPO
+  git pull
+done
