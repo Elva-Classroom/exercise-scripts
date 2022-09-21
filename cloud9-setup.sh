@@ -11,9 +11,17 @@ project=$C9_PROJECT
 name_len=${#project}
 if [ $name_len -gt 12 ]; then
   echo "Your Cloud9 instance name is longer than 12 characters."
-  echo "Please re-recreate your instance with a shorter name and no punctuation."
+  echo "Please re-recreate your instance with a shorter name, all lowercase and no punctuation."
   exit 1
 fi
+
+if [[ "$project" =~ [A-Z] ]]; then
+  echo "Do not use uppercase letters in your Cloud9 instance name."
+  echo "Please re-recreate your instance with a shorter name, all lowercase and no punctuation."
+  exit 1
+fi
+
+exit
 
 aws configure set region us-west-2
 
