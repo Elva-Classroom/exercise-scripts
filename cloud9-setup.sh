@@ -21,7 +21,6 @@ if [[ "$project" =~ [A-Z] ]]; then
   exit 1
 fi
 
-exit
 
 aws configure set region us-west-2
 
